@@ -19,6 +19,22 @@ A replication factor 1 means 1 row will be written to 1 node. That means the dat
 
 If you choose replication factor 2 that means you replicate a given data record. Which is in case better :-)
 
+Middleware
+==========
+
+Cassandra can be used in middleware either as a service or as a LogHandler.
+
+Cassandra Do's and Dont's
+=========================
+
+You should use wide rows, but please don't make these rows smaller than 50 to 100 MB.
+
+A column family should use a maximum of 10000 entries.
+
+You should have a maximum of 500 column families in one keyspace.
+
+
+
 
 
 
