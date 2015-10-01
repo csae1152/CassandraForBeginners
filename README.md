@@ -10,5 +10,16 @@ Cassandra can scale in theory infinite. It works as Peer system, adding new node
 
 You can access Cassandra within Java with Hector or Astyanax or a CQL shell.
 
+Replication and consistency
+===========================
+
+On creating a new cassandra keyspace you have to choose a new strategy (SimpleStrategy or NetworkTopologyStrategy) as well as a replication factor.
+
+A replication factor 1 means 1 row will be written to 1 node. That means the data record is created only one time.
+
+If you choose replication factor 2 that means you replicate a given data record. Which is in case better :-)
+
+
+
 
 
