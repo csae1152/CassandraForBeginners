@@ -33,6 +33,13 @@ A column family should use a maximum of 10000 entries.
 
 You should have a maximum of 500 column families in one keyspace.
 
+Distribution of nodes
+=====================
+
+On a low level you could divide cassandra nodes in racks and dataCenter. Both are possibilities to describe geographical relationship between nodes.
+
+
+
 
 
 
