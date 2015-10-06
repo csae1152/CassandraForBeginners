@@ -22,7 +22,7 @@ If you choose replication factor 2 that means you replicate a given data record.
 Middleware
 ==========
 
-Cassandra can be used in middleware either as a service or as a LogHandler.
+Cassandra can be used in middleware either as a service or as a LogHandler. For accessing those services you can use astyanax from netflix.
 
 Cassandra Do's and Dont's
 =========================
