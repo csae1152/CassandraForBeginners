@@ -38,6 +38,11 @@ Distribution of nodes
 
 On a low level you could divide cassandra nodes in racks and dataCenter. Both are possibilities to describe geographical relationship between nodes.
 
+Cassandra and logging - a love story 
+====================================
+
+One possible scenario you can use cassandra for is logging.
+
 
 
 
