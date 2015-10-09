@@ -43,6 +43,17 @@ Cassandra and logging - a love story
 
 One possible scenario you can use cassandra for is logging.
 
+Example
+=======
+
+CREATE TABLE person (
+    domain text PRIMARY KEY,
+    created_at timestamp,
+    names set<text>,
+    person_counters map<text, float>,
+    email map<text, text>
+) WITH comment='person';
+
 
 
 
