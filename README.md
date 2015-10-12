@@ -54,6 +54,42 @@ CREATE TABLE person (
     email map<text, text>
 ) WITH comment='person';
 
+Smarter Snitches and Strategies
+===============================
+
+Cassandra has another Snitch called PropertyFileSnitch which maintains
+much more information about nodes within the ring. PropertyFileSnitch
+maintains a mapping of node, datacenter, and rack so that we can determine,
+for any node, what data center itisin, and whatrack within that datacenter it
+isin. Thisinformation isstatically defined in cassandra-topology.properties.
+
+There is also a Strategy thatis made to use the information from a
+PropertyFileSnitch called NetworkTopologyStrategy (NTS). The NTS
+algorithm isimplemented asfollows:
+GetDatacentersfrom strategy options: {DC0:1,DC1:1}
+For each data center entry Getreplication factor
+Get a list of all endpointsfor this datacenter from the snitch
+Create a ringIterator from the datacenter endpointslist and Collect
+endpointsto write to – only select an endpointfrom the listfor any given
+rack once (distribute acrossracks)
+
+If replication factor has not been met, continue to collect endpointsfrom
+the list, allowing racksthat already contain an endpointin the write list
+If our replication factor is not equal to our list of endpoints, throw an error
+because there are not enough nodesin the data center to meetthe replication
+factor
+
+There is a lot of importantstuff going on here (see the presentation slidesfor
+more in depth coverage of whatis going on internally), butto keep it brief, the
+key difference isthatinstead of iterating over an entire set of nodesin the ring,
+NTS creates an iterator for EACH datacenter and places writes discretely for
+each. The resultisthatNTS basically breaks each datacenter into it's own
+logicalring when it places writes.
+
+Here is a diagram of how each SimpleStrategy and NTS view the set of available
+nodes when trying to place data.
+
+
 
 
 
