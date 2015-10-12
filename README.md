@@ -86,8 +86,7 @@ NTS creates an iterator for EACH datacenter and places writes discretely for
 each. The resultisthatNTS basically breaks each datacenter into it's own
 logicalring when it places writes.
 
-Here is a diagram of how each SimpleStrategy and NTS view the set of available
-nodes when trying to place data.
+
 
 
 
