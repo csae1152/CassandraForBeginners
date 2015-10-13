@@ -86,6 +86,18 @@ NTS creates an iterator for EACH datacenter and places writes discretely for
 each. The resultisthatNTS basically breaks each datacenter into it's own
 logicalring when it places writes.
 
+Data placement
+==============
+
+Cassandra is not“fixed” in the way thatit places data around the ring. It uses
+two components, Snitches and Strategies, to determine which nodes will
+receive copies of data. 
+
+Snitches define proximity of nodes within the ring.
+Strategies use the information Snitches provide them about node proximity
+along with an implemented algorithm to collect nodesthat willreceive writes.
+
+
 
 
 
