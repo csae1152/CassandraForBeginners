@@ -106,6 +106,14 @@ assign the exactsame token to more than one node though,so we must offset
 tokensthat are in conflict. For the first data center assign 0 and 50, for the
 second data center assign 1 and 51, for the third data center, 2 and 52, etc.
 
+Introducing FiloDB. Distributed. Versioned. Columnar.
+=====================================================
+
+Distributed – FiloDB is designed from the beginning to run on best-of-breed distributed, scale-out storage platforms such as Apache Cassandra. Queries run in parallel in Apache Spark for scale-out ad-hoc analysis.
+Columnar – FiloDB brings breakthrough performance levels for analytical queries by using a columnar storage layout with different space-saving techniques like dictionary compression. The performance is comparable to Parquet, and one to two orders of magnitude faster than Spark on Cassandra 2.x for analytical queries. For the POC performance comparison, please see the cassandra-gdelt repo.
+
+Versioned – At the same time, row-level, column-level operations and built in versioning gives FiloDB far more flexibility than can be achieved using file-based technologies like Parquet alone.
+
 
 
 
