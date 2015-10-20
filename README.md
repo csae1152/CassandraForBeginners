@@ -114,6 +114,15 @@ Columnar – FiloDB brings breakthrough performance levels for analytical querie
 
 Versioned – At the same time, row-level, column-level operations and built in versioning gives FiloDB far more flexibility than can be achieved using file-based technologies like Parquet alone.
 
+Examples and tests
+==================
+
+2 datacenter (N1, N2 + N3, N4), N1 and N3 are seed nodes - replication 2:
+Data is hold twice through datacenter.
+
+2 datacenter (N1, N2 + N3, N4), N1 and N3 are seed nodes - replication 1
+
+1 datacenter (N1 + N2), only N1 is seed node - replication 2
 
 
 
