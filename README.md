@@ -124,6 +124,18 @@ Data is hold twice through datacenter.
 
 1 datacenter (N1 + N2), only N1 is seed node - replication 2
 
+Mirrored Offset Tokens
+======================
+
+If we choose even tokensfor each data center, in our example token range of 0-
+100, we would end up with tokens 0 and 50 for each of our nodes. We can not
+assign the exactsame token to more than one node though,so we must offset
+tokensthat are in conflict. 
+
+For the first data center assign 0 and 50, for the
+second data center assign 1 and 51, for the third data center, 2 and 52, etc.
+
+
 
 
 
