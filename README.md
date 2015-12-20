@@ -135,6 +135,11 @@ tokensthat are in conflict.
 For the first data center assign 0 and 50, for the
 second data center assign 1 and 51, for the third data center, 2 and 52, etc.
 
+Building a logging framework with Cassandra
+===========================================
+
+1. Cassandra is great for storing and analysing log files.
+
 
 
 
