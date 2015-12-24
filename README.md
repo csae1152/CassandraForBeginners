@@ -139,6 +139,8 @@ Building a logging framework with Cassandra
 ===========================================
 
 1. Cassandra is great for storing and analysing log files.
+2. Let's connect Java with our Cassandra store:
+    We use Astyanax for connecting.
 
 
 
