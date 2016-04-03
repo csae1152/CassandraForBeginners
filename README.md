@@ -29,7 +29,7 @@ Cassandra Do's and Dont's
 
 You should use wide rows, but please don't make these rows smaller than 50 to 100 MB.
 
-A column family should use a maximum of 10000 entries.
+A column family should use a maximum of about 10000 entries.
 
 You should have a maximum of 500 column families in one keyspace.
 
@@ -56,6 +56,14 @@ CREATE TABLE person (
 
 Smarter Snitches and Strategies
 ===============================
+
+Types of Snitches
+
+Simple Snitch- It has the strategy of placing the copy of the row on the next available node walking clockwise through the nodes.
+
+Rack Inferring Snitch- It tries to place copies of rows of different racks in the data center. It will know about the rack and data center and will try to place copies in different racks and data centers. From the IP address, it can determine the data center address and the rack. So the IP address will have to be configured  in such a way that the second unit of IP address will be used to identify the data center. The third unit identifies the rack.
+
+Property file snitch- In rack inferring, it will read the IP address but in case the address is not configured in that way, there is an option of defining this information in a property file. So how do you define this information in a property file?
 
 Cassandra has another Snitch called PropertyFileSnitch which maintains
 much more information about nodes within the ring. PropertyFileSnitch
