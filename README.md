@@ -150,6 +150,15 @@ Building a logging framework with Cassandra
 2. Let's connect Java with our Cassandra store:
     We use Astyanax for connecting.
 
+Why to use Cassandra:
+=====================
+
+Cassandra can be integrated with Hadoop, Hive and Apache Spark for batch processing.
+
+Cassandra is a good candidate for real time analytics, however there might be scenarios where you might have to perform batch processing on the stored data. Cassandra can be easily integrated with Hadoop and Hive to achieve this. Also, on-demand in-memory analytics can be done through Apache Spark integration.
+
+
+
 
 
 
