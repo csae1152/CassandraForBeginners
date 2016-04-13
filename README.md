@@ -155,6 +155,8 @@ Why to use Cassandra:
 
 Cassandra can be integrated with Hadoop, Hive and Apache Spark for batch processing.
 
+In nowadays software application it becomes more and more important to analyse huge amount of log-data. To understand log-data has become critical to find, understand and predict bugs.
+
 Cassandra is a good candidate for real time analytics, however there might be scenarios where you might have to perform batch processing on the stored data. Cassandra can be easily integrated with Hadoop and Hive to achieve this. Also, on-demand in-memory analytics can be done through Apache Spark integration.
 
 
