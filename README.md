@@ -19,8 +19,8 @@ A replication factor 1 means 1 row will be written to 1 node. That means the dat
 
 If you choose replication factor 2 that means you replicate a given data record. Which is in case better :-)
 
-Middleware
-==========
+Middleware (Astyanax)
+=====================
 
 Cassandra can be used in middleware either as a service or as a LogHandler. For accessing those services you can use astyanax from netflix.
 
