@@ -31,7 +31,7 @@ You should use wide rows, but please don't make these rows smaller than 50 to 10
 
 A column family should use a maximum of about 10000 entries.
 
-You should have a maximum of 500 column families in one keyspace.
+You should have a maximum of 500 column families in one keyspace. 
 
 Distribution of nodes
 =====================
@@ -159,6 +159,14 @@ In nowadays software application it becomes more and more important to analyse h
 
 Cassandra is a good candidate for real time analytics, however there might be scenarios where you might have to perform batch processing on the stored data. Cassandra can be easily integrated with Hadoop and Hive to achieve this. Also, on-demand in-memory analytics can be done through Apache Spark integration.
 
+New Features in Cassandra 0.7
+=============================
+
+Online Schema Changes 
+
+Prior to Cassandra 0.7 adding and removing column families and keyspaces required you to first distribute an updated configuration file to each of your nodes and then execute a rolling restart of your cluster.  That was not too bad, but it was manual and required human intervention, so it was possible to make mistakes.
+
+Cassandra 0.7 solves this problem by exposing the ability to create and drop column families and keyspaces from its client API.  Using the same methods there is limited support for updating existing column families and keyspaces (e.g., increasing the replication factor for a particular keyspace).
 
 
 
