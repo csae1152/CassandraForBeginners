@@ -57,6 +57,14 @@ CREATE TABLE person (
 Smarter Snitches and Strategies
 ===============================
 
+What is a Snitch?
+
+A snitch determines which data centers and racks are to be written to and read from. The job of a snitch is to simply determine relative host proximity. Hence, if a node has 3 options to copy the data, which host should it select? Which host should it prefer the data from?
+
+If this is the kind of information the host would like to receive, it will call a particular snitch to see which host is relatively nearer. Snitches gather information about network topology. Depending on what type of snitch is being used, they will be aware about the network topology a person is using and they can efficiently route the requests.
+
+For a single data center cluster, using the default simple snitch is sufficient. Therefore, a simple snitch is nothing but it is a rack unaware snitch. It does not know about the racks and data centers in a cluster. It does not have any information, so it will assume there are no racks and it will choose the nearest host in terms of the network bandwidth available. It wont consider whether it has to prefer a node from the same rack or same data center. But other replicas available are rack aware and there are different types of snitches.
+
 Types of Snitches
 
 Simple Snitch- It has the strategy of placing the copy of the row on the next available node walking clockwise through the nodes.
