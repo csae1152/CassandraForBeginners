@@ -179,7 +179,7 @@ Cassandra 0.7 solves this problem by exposing the ability to create and drop col
 Cassandra Query Language (CQL) v2.0
 ===================================
 
-''
+```
 <selectStatement> ::= "SELECT" <whatToSelect>
                         "FROM" ( <name> "." )? <name>
                                ( "USING" "CONSISTENCY" <consistencylevel> )?
@@ -206,10 +206,7 @@ Cassandra Query Language (CQL) v2.0
 <relation> ::= <term> <relationOperator> <term>
              ;
 <relationOperator> ::= "=" | "<" | ">" | "<=" | ">="
-
-
-
-''
+```
 
 
 
