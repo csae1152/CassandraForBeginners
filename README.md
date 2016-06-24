@@ -176,6 +176,41 @@ Prior to Cassandra 0.7 adding and removing column families and keyspaces require
 
 Cassandra 0.7 solves this problem by exposing the ability to create and drop column families and keyspaces from its client API.  Using the same methods there is limited support for updating existing column families and keyspaces (e.g., increasing the replication factor for a particular keyspace).
 
+Cassandra Query Language (CQL) v2.0
+===================================
+
+'''
+<selectStatement> ::= "SELECT" <whatToSelect>
+                        "FROM" ( <name> "." )? <name>
+                               ( "USING" "CONSISTENCY" <consistencylevel> )?
+                               ( "WHERE" <selectWhereClause> )?
+                               ( "LIMIT" <integer> )?
+                    ;
+<whatToSelect> ::= <term> ( "," <term> )*
+                 | ("FIRST" <integer> )? "REVERSED"? <columnRange>
+                 | "COUNT" "(" <countTarget> ")"
+                 ;
+<columnRange> ::= <term> ".." <term>
+                | "*"
+                ;
+<countTarget> ::= "*"
+                | "1"
+                ;
+<name> ::= <identifier>
+         | <stringLiteral>
+         | <integer>
+         ;
+<selectWhereClause> ::= <relation> ( "AND" <relation> )*
+                      | <term> "IN" "(" <term> ( "," <term> )* ")"
+                      ;
+<relation> ::= <term> <relationOperator> <term>
+             ;
+<relationOperator> ::= "=" | "<" | ">" | "<=" | ">="
+
+
+
+'''
+
 
 
 
