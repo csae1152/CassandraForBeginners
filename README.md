@@ -208,6 +208,18 @@ Cassandra Query Language (CQL) v2.0
 <relationOperator> ::= "=" | "<" | ">" | "<=" | ">="
 ```
 
+The SELECT expression determines which columns will appear in the results and can take a few different forms, as shown above. The simplest is a comma-separated list of column names. Note that column names in Cassandra can be specified with string literals or integers, in addition to identifiers.
+
+It is also possible to specify a range of column names. The range notation consists of start and end column names, separated by two periods (..). The set of columns returned for a range is start and end inclusive. A single star (*) may be used as a range to request “all columns”.
+
+When using a range, it is sometimes useful to limit the number of columns that can be returned as part of each row (since Cassandra is schemaless, it is not necessarily possible to determine ahead of time how many columns will be in the result set). To accomplish this, use the FIRST clause with an integer to specify an upper limit on the number of columns returned per row. The default limit is 10,000 columns.
+
+The REVERSED option causes the sort order of the columns returned to be reversed. This affects the FIRST clause; when limiting the columns returned, the columns at the end of the range will be selected instead of the ones at the beginning of the range.
+
+A SELECT expression may also be COUNT(*). In this case, the result will be only one value: the number of rows which matched the query.
+
+It is worth noting that unlike the projection in a SQL SELECT, there is no guarantee that the results will contain all of the columns specified, because Cassandra is schemaless.
+
 
 
 
