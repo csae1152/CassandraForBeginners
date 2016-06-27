@@ -220,6 +220,8 @@ A SELECT expression may also be COUNT(*). In this case, the result will be only 
 
 It is worth noting that unlike the projection in a SQL SELECT, there is no guarantee that the results will contain all of the columns specified, because Cassandra is schemaless.
 
+Because of this feature (schemaless) it's not necessary to restart Cassandra after DB changes.
+
 
 
 
