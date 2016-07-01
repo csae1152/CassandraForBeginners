@@ -222,6 +222,8 @@ It is worth noting that unlike the projection in a SQL SELECT, there is no guara
 
 Because of this feature (schemaless) it's not necessary to restart Cassandra after DB changes.
 
+That's one of the biggest advantages in a production environment.
+
 
 
 
