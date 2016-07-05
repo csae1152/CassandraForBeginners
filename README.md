@@ -1,6 +1,6 @@
 # CassandraForBeginners
 
-Cassandra is a NoSQL database, which is optimized for high read and write througput. Cassandra belongs to the wide column families.
+Cassandra is a NoSQL database, which is optimized for high read and write throughput. Cassandra belongs to the wide column store families.
 
 Like relational databases Cassandra has no ACID functionality. But objects to be stored are written atomar as so called columns.
 
