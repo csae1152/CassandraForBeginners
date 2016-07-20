@@ -224,6 +224,11 @@ Because of this feature (schemaless) it's not necessary to restart Cassandra aft
 
 That's one of the biggest advantages in a production environment.
 
+Integrating Cassandra into a data pipeline with Kafka and Spark
+===============================================================
+
+First we have to decide wether we will use a lambda architecture or not..
+
 
 
 
