@@ -43,6 +43,11 @@ Cassandra and logging - a love story
 
 One possible scenario you can use cassandra for is logging.
 
+Cassandra and Docker
+====================
+
+First hint: Use network hosting.
+
 Example
 =======
 
