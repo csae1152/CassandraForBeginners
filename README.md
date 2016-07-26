@@ -48,6 +48,8 @@ Cassandra and Docker
 
 First hint: Use network hosting.
 
+Make a decision how many nodes you will need.
+
 Example
 =======
 
