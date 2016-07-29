@@ -33,6 +33,7 @@ A column family should use a maximum of about 10000 entries.
 
 You should have a maximum of 500 column families in one keyspace. 
 
+
 Distribution of nodes
 =====================
 
@@ -108,6 +109,9 @@ key difference isthatinstead of iterating over an entire set of nodesin the ring
 NTS creates an iterator for EACH datacenter and places writes discretely for
 each. The resultisthatNTS basically breaks each datacenter into it's own
 logicalring when it places writes.
+
+Cassandra on Kubernetes - Seed Provider and Snitch
+==================================================
 
 Data placement
 ==============
