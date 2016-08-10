@@ -240,6 +240,8 @@ Integrating Cassandra into a data pipeline with Kafka and Spark
 
 First we have to decide wether we will use a lambda architecture or not..
 
+Lambda architecture is a combination between batch- and (near) realtime processing piplines.
+
 
 
 
