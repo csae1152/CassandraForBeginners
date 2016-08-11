@@ -242,6 +242,10 @@ First we have to decide wether we will use a lambda architecture or not..
 
 Lambda architecture is a combination between batch- and (near) realtime processing piplines.
 
+For batch processing Hadoop and HDFS is still my prefered solution.
+
+Storm would be the prefered for (near) realtime processing.
+
 
 
 
