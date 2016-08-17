@@ -2,6 +2,8 @@
 
 Cassandra is a NoSQL database, which is optimized for high read and write throughput. Cassandra belongs to the wide column store families.
 
+This makes Cassandra an optimal choice for storing your log output. In combination with Elasticsearch you have an efficient way to store and find information in your log files.
+
 Like relational databases Cassandra has no ACID functionality. But objects to be stored are written atomar as so called columns.
 
 This behaviour makes it the first choice for example logging entries. (all called methods)
