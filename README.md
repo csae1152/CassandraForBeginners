@@ -46,6 +46,8 @@ Cassandra and logging - a love story
 
 One possible scenario you can use cassandra for is logging.
 
+You can use netflix astyanax or the datastax driver for connecting with Java. 
+
 Cassandra and Docker
 ====================
 
