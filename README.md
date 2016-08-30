@@ -250,6 +250,8 @@ For batch processing Hadoop and HDFS is still my prefered solution.
 
 Storm would be the prefered for (near) realtime processing.
 
+For the MyPredictiveFarm application we need a realtime pipline.
+
 
 
 
