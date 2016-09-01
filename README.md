@@ -244,7 +244,7 @@ Integrating Cassandra into a data pipeline with Kafka and Spark
 
 First we have to decide wether we will use a lambda architecture or not..
 
-Lambda architecture is a combination between batch- and (near) realtime processing piplines.
+Lambda architecture is a combination between batch- and realtime processing piplines.
 
 For batch processing Hadoop and HDFS is still my prefered solution.
 
