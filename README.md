@@ -252,6 +252,10 @@ Storm would be the prefered for (near) realtime processing.
 
 For the MyPredictiveFarm application we need a realtime pipline.
 
+Cassandra vs. BigQuery
+=====================
+
+BigQuery -> Scanning 133GB of files in less than 19sec.
 
 
 
