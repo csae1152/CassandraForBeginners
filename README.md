@@ -257,6 +257,8 @@ Cassandra vs. BigQuery
 
 BigQuery -> Scanning 133GB of files in less than 19sec.
 
+Let's try to achive this wonderfully result with Cassandra...
+
 
 
 
