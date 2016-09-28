@@ -261,6 +261,11 @@ Let's try to achive this wonderfully result with Cassandra...
 
 Configure Cassandra for working with DataStux-driver.
 
+Cassandra and Spark - Building a sophisticated data pipline
+===========================================================
+
+
+
 
 
 
