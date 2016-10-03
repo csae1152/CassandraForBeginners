@@ -261,8 +261,11 @@ Let's try to achive this wonderfully result with Cassandra...
 
 Configure Cassandra for working with DataStux-driver.
 
-Cassandra and Spark - Building a sophisticated data pipline
-===========================================================
+Advantages of Cassandra:
+
+Read and write throughput both increase linearly as new machines are added, with no downtime or interruption to applications.
+
+
 
 
 
