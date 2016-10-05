@@ -265,6 +265,9 @@ Advantages of Cassandra:
 
 Read and write throughput both increase linearly as new machines are added, with no downtime or interruption to applications.
 
+Dealing with database changes
+=============================
+
 
 
 
