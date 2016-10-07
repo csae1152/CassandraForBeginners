@@ -268,6 +268,8 @@ Read and write throughput both increase linearly as new machines are added, with
 Dealing with database changes
 =============================
 
+An option would be using flyway for monitoring database changes.
+
 
 
 
