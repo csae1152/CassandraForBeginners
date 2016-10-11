@@ -270,6 +270,10 @@ Dealing with database changes
 
 An option would be using flyway for monitoring database changes.
 
+Let's try and use MySQL as a NoSQL solution
+
+We can use a MySQL farm as a key/value store.
+
 
 
 
