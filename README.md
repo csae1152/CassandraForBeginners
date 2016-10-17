@@ -274,6 +274,8 @@ Let's try and use MySQL as a NoSQL solution
 
 We can use a MySQL farm as a key/value store.
 
+Advantages of using MySQL instead of Cassandra
+
 
 
 
