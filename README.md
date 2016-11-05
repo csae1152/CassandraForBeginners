@@ -276,6 +276,9 @@ We can use a MySQL farm as a key/value store.
 
 Advantages of using MySQL instead of Cassandra
 
+Is it better to use Cassandra with a SSD disk ?
+===============================================
+
 
 
 
