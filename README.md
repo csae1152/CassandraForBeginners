@@ -155,6 +155,9 @@ Data is hold twice through datacenter.
 
 1 datacenter (N1 + N2), only N1 is seed node - replication 2
 
+1 datacenter
+Data is hold only once.
+
 Mirrored Offset Tokens
 ======================
 
