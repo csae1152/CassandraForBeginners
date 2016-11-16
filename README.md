@@ -282,6 +282,8 @@ Advantages of using MySQL instead of Cassandra
 Is it better to use Cassandra with a SSD disk ?
 ===============================================
 
+Cassandra is optimized for working with revolving disks.
+
 
 
 
