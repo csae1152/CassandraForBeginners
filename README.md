@@ -284,6 +284,8 @@ Is it better to use Cassandra with a SSD disk ?
 
 Cassandra is optimized for working with revolving disks.
 
+Performance comparison
+
 
 
 
