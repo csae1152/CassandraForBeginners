@@ -284,7 +284,13 @@ Is it better to use Cassandra with a SSD disk ?
 
 Cassandra is optimized for working with revolving disks.
 
-Performance comparison
+Automatic Data Distribution
+
+Relational databases and some NoSQL systems require manual, developer-driven methods for distributing data across the multiple machines of a database cluster. These techniques are commonly referred to by the term "sharding." Sharding is an old technique that has seen some success in the industry, but is beset by inherent design and operational challenges. In contrast to this legacy architecture, Cassandra automatically distributes and maintains data across a cluster, freeing developers and architects to direct their energies into value-creating application features.
+
+Cassandra has an internal component called a partitioner, which determines how data is distributed across the nodes that make up a database cluster. In short, a partitioner is a hashing mechanism that takes a table row’s primary key, computes a numerical token for it, and then assigns it to one of the nodes in a cluster in a way that is predictable and consistent.
+
+While the partitioner is a configurable property of a Cassandra cluster, the default partitioner is one that randomizes data across a cluster and ensures an even distribution of all data. Cassandra also automatically maintains the balance of data across a cluster even when existing nodes are removed or new nodes are added to a system.
 
 
 
