@@ -292,6 +292,8 @@ Cassandra has an internal component called a partitioner, which determines how d
 
 While the partitioner is a configurable property of a Cassandra cluster, the default partitioner is one that randomizes data across a cluster and ensures an even distribution of all data. Cassandra also automatically maintains the balance of data across a cluster even when existing nodes are removed or new nodes are added to a system.
 
+
+
 package com.marxmart.persistence;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Host;
@@ -341,6 +343,17 @@ public class CassandraConnector
       cluster.close();
    }
 }
+
+Data distribution and replication
+
+In Cassandra, data distribution and replication go together. Data is organized by table and identified by a primary key, which determines which node the data is stored on. Replicas are copies of rows. When data is first written, it is also referred to as a replica.
+
+Factors influencing replication include:
+
+1. Virtual nodes: assigns data ownership to physical machines.
+2. Partitioner: partitions the data across the cluster.
+3. Replication strategy: determines the replicas for each row of data.
+4. Snitch: defines the topology information that the replication strategy uses to place replicas.
 
 
 
