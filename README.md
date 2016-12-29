@@ -355,6 +355,10 @@ Factors influencing replication include:
 3. Replication strategy: determines the replicas for each row of data.
 4. Snitch: defines the topology information that the replication strategy uses to place replicas.
 
+FAULT TOLERANT
+
+Data is automatically replicated to multiple nodes for fault-tolerance. Replication across multiple data centers is supported. Failed nodes can be replaced with no downtime.
+
 
 
 
