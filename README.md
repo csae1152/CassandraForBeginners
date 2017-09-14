@@ -364,6 +364,16 @@ Unit Testing
 
 The most simple way to test code in Cassandra is probably by writing a unit test. Cassandra uses JUnit as a testing framework and test cases can be found in the test/unit directory. Ideally you’d be able to create a unit test for your implementation that would exclusively cover the class you created (the unit under test). Unfortunately this is not always possible and Cassandra doesn’t have a very mock friendly code base. Often you’ll find yourself in a situation where you have to make use of an embedded Cassandra instance that you’ll be able to interact with in your test. If you want to make use of CQL in your test, you can simply extend CQLTester and use some of the convenient helper methods such as in the following example.
 
+The CAP-Theorem & Tunable Consistency
+
+Possibly the best-known peculiarity of distributed systems is the CAP-Theorem by Dr. E. A. Brewer. It states that of the three attributes, Consistency, Availability and Partition Tolerance, any such system can only fulfill two at a time (take this with a grain of salt).
+
+Without going into too many details, RDBMS have for years focused on the first two, consistency and availability, allowing for such great things as transactions. The whole NoSQL movement (from a 10,000ft view) is essentially about choosing partition tolerance instead of (strong) consistency. This has led to the popular belief that NoSQL databases are completely unsuitable for applications requiring just that. And while this might be true for some, it isn’t for Cassandra.
+
+One of Cassandra’s stand-out features is called “Tunable Consistency”. This means that the programmer can decide if performance or accuracy is more important, on a per-query level. For write-requests, Cassandra will either replicate to any available (replication) node, a quorum of nodes or to all nodes, even providing options how to deal with multi-datacenter setups.
+
+For read-requests, you can instruct Cassandra to either wait for any available node (which might return stale data), a quorum of machines (thereby reducing the probability to get stale data) or to wait for every node, which will always return the latest data and provide us with our long-sought, strong consistency.
+
 
 
 
