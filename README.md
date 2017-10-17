@@ -374,6 +374,13 @@ One of Cassandra’s stand-out features is called “Tunable Consistency”. Thi
 
 For read-requests, you can instruct Cassandra to either wait for any available node (which might return stale data), a quorum of machines (thereby reducing the probability to get stale data) or to wait for every node, which will always return the latest data and provide us with our long-sought, strong consistency.
 
+About snapshots 
+
+Cassandra backs up data by taking a snapshot of all on-disk data files (SSTable files) stored in the data directory. You can take a snapshot of all keyspaces, a single keyspace, or a single table while the system is online.
+
+Using a parallel ssh tool (such as pssh), you can snapshot an entire cluster. This provides an eventually consistent backup. Although no one node is guaranteed to be consistent with its replica nodes at the time a snapshot is taken, a restored snapshot resumes consistency using Cassandra's built-in consistency mechanisms.
+
+After a system-wide snapshot is performed, you can enable incremental backups on each node to backup data that has changed since the last snapshot: each time a memtable is flushed to disk and an SSTable is created, a hard link is copied into a /backups subdirectory of the data directory (provided JNA is enabled). Compacted SSTables will not create hard links in /backups because snapshot_before_compaction creates a new set of hardlinks before every compaction that can be used to recreate any SSTables compacted.
 
 
 
