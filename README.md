@@ -375,6 +375,7 @@ One of Cassandra’s stand-out features is called “Tunable Consistency”. Thi
 For read-requests, you can instruct Cassandra to either wait for any available node (which might return stale data), a quorum of machines (thereby reducing the probability to get stale data) or to wait for every node, which will always return the latest data and provide us with our long-sought, strong consistency.
 
 About snapshots 
+===============
 
 Cassandra backs up data by taking a snapshot of all on-disk data files (SSTable files) stored in the data directory. You can take a snapshot of all keyspaces, a single keyspace, or a single table while the system is online.
 
