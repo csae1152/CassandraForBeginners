@@ -383,6 +383,9 @@ Using a parallel ssh tool (such as pssh), you can snapshot an entire cluster. Th
 
 After a system-wide snapshot is performed, you can enable incremental backups on each node to backup data that has changed since the last snapshot: each time a memtable is flushed to disk and an SSTable is created, a hard link is copied into a /backups subdirectory of the data directory (provided JNA is enabled). Compacted SSTables will not create hard links in /backups because snapshot_before_compaction creates a new set of hardlinks before every compaction that can be used to recreate any SSTables compacted.
 
+Cassandra and Integration in Java
+=================================
+
 
 
 
